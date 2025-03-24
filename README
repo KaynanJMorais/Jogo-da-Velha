@@ -1,0 +1,28 @@
+Jogo da Velha em C
+
+Sobre o Projeto
+
+Este é um jogo da velha desenvolvido em C, que pode ser jogado por dois jogadores no terminal. O jogo segue as regras tradicionais, onde os jogadores alternam entre ‘X’ e ‘O’ até que um vença ou ocorra um empate.
+
+Funcionalidades
+	•	Dois jogadores alternam turnos para fazer suas jogadas.
+	•	Validação de jogadas para evitar posições ocupadas ou inválidas.
+	•	Verificação automática de vitória ou empate.
+	•	Opção de reiniciar a partida ao final do jogo.
+
+Como Jogar
+	1.	O jogo inicia exibindo um tabuleiro vazio.
+	2.	O jogador 1 joga com ‘X’ e o jogador 2 joga com ‘O’.
+	3.	Cada jogador escolhe uma posição informando a linha e a coluna (de 1 a 3).
+	4.	Se a posição estiver livre, a jogada é registrada e o turno passa para o próximo jogador.
+	5.	O jogo continua até que um jogador vença ou todas as posições sejam preenchidas, resultando em um empate.
+	6.	Após o término, há a opção de reiniciar a partida.
+
+Como Executar
+	1.	Baixe ou clone o repositório para sua máquina.
+	2.	Compile o código usando um compilador C.
+	3.	Execute o programa pelo terminal.
+
+
+Contribuição
+eu i os minino
