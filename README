@@ -1,28 +1,53 @@
 Jogo da Velha em C
 
-Sobre o Projeto
+Este é um jogo da velha simples implementado na linguagem C. O jogo permite que dois jogadores joguem alternadamente, inserindo suas jogadas em um tabuleiro de 3x3 até que haja um vencedor ou ocorra um empate.
 
-Este é um jogo da velha desenvolvido em C, que pode ser jogado por dois jogadores no terminal. O jogo segue as regras tradicionais, onde os jogadores alternam entre ‘X’ e ‘O’ até que um vença ou ocorra um empate.
+Estrutura do Código
 
-Funcionalidades
-	•	Dois jogadores alternam turnos para fazer suas jogadas.
-	•	Validação de jogadas para evitar posições ocupadas ou inválidas.
-	•	Verificação automática de vitória ou empate.
-	•	Opção de reiniciar a partida ao final do jogo.
+O código está organizado em diversas funções para facilitar a leitura e manutenção. Aqui está um resumo de cada uma delas:
 
-Como Jogar
-	1.	O jogo inicia exibindo um tabuleiro vazio.
-	2.	O jogador 1 joga com ‘X’ e o jogador 2 joga com ‘O’.
-	3.	Cada jogador escolhe uma posição informando a linha e a coluna (de 1 a 3).
-	4.	Se a posição estiver livre, a jogada é registrada e o turno passa para o próximo jogador.
-	5.	O jogo continua até que um jogador vença ou todas as posições sejam preenchidas, resultando em um empate.
-	6.	Após o término, há a opção de reiniciar a partida.
+1. Função main()
 
-Como Executar
-	1.	Baixe ou clone o repositório para sua máquina.
-	2.	Compile o código usando um compilador C.
-	3.	Execute o programa pelo terminal.
+A função principal do programa (main) é responsável por iniciar o jogo chamando a função jogar(). Ao término de uma partida, o jogador tem a opção de jogar novamente ou encerrar o programa.
 
+2. Função jogar()
 
-Contribuição
-eu i os minino
+Esta é a função que gerencia o jogo. Ela:
+	•	Inicializa o tabuleiro.
+	•	Alterna entre os jogadores.
+	•	Exibe o tabuleiro após cada jogada.
+	•	Verifica se a jogada é válida.
+	•	Determina se há um vencedor ou um empate.
+	•	Permite reiniciar a partida caso o jogador deseje.
+
+3. Função inicializarTabuleiro()
+
+Essa função preenche o tabuleiro com espaços em branco (' '), garantindo que ele esteja vazio antes do início da partida.
+
+4. Função exibirTabuleiro()
+
+Exibe o estado atual do tabuleiro na tela, organizando os elementos de maneira visualmente clara para os jogadores.
+
+5. Função jogadaValida()
+
+Verifica se a jogada escolhida pelo jogador é válida, garantindo que:
+	•	A posição escolhida está dentro dos limites do tabuleiro.
+	•	A casa ainda não foi ocupada.
+
+6. Função verificarVitoria()
+
+Verifica se há um vencedor, analisando as três condições de vitória:
+	•	Três símbolos iguais em uma linha.
+	•	Três símbolos iguais em uma coluna.
+	•	Três símbolos iguais em uma das diagonais.
+
+Se uma dessas condições for atendida, a função retorna verdadeiro, encerrando o jogo e declarando o vencedor.
+
+Como o Jogo Funciona
+	1.	O jogo começa com o tabuleiro vazio.
+	2.	Dois jogadores alternam suas jogadas, escolhendo uma posição (linha e coluna) para inserir seu símbolo (X ou O).
+	3.	O jogo verifica se a jogada é válida antes de registrar a entrada.
+	4.	Após cada jogada, o jogo verifica se há um vencedor ou se todas as casas foram preenchidas (empate).
+	5.	Se houver um vencedor, ele é anunciado e o jogo termina.
+	6.	Se todas as casas forem preenchidas e ninguém vencer, o jogo termina em empate.
+	7.	O jogador tem a opção de jogar novamente ou encerrar o jogo
